@@ -1,0 +1,75 @@
+/* FILE: style.scss */
+
+//
+// bbPress Styles Base
+//
+// @package    bbPress Styles Base
+// @copyright  WebMan Design, Oliver Juhas
+//
+// @since    1.0.0
+// @version  1.0.0
+//
+
+//
+// Style differences against the bbPress native stylesheet:
+//
+// @todo
+//
+
+
+
+
+// Setup
+
+	// Responsive breakpoints
+
+		$bp: (
+			's'     :  28em, //  448px // Starting mobile landscape
+			'm'     :  42em, //  672px // Starting tablet portrait
+			'l'     :  55em, //  880px // Starting tablet landscape
+			'xl'    :  80em, // 1280px // Starting laptop
+			'xxl'   : 100em, // 1600px // Starting desktop
+			'xxxl'  : 120em, // 1920px // Starting desktop full HD
+			'xxxxl' : 160em, // 2560px // Starting desktop WQHD
+		);
+
+	// Language direction
+
+		$left: left;
+		$right: right;
+
+
+
+
+
+// Imports
+
+	@import '_extenders';
+
+	@import 'base';
+
+	@import 'breadcrumbs';
+
+	@import 'forms';
+
+	@import 'links';
+
+	@import 'notices';
+
+	@import 'badges';
+
+	@import 'pagination';
+
+	@import 'toggles';
+
+	@import 'tinymce';
+
+	@import 'user';
+
+	@import 'forum-topic-reply';
+
+	@import 'others';
+
+	@import 'widgets';
+
+	@import 'buddypress';

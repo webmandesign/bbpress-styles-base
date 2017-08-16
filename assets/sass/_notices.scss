@@ -1,0 +1,89 @@
+/* FILE: _notices.scss */
+
+//
+// Notice and alerts styles
+//
+
+
+
+
+
+// Notices
+
+	%bbp_notice {
+		clear: both;
+		padding: 1rem 1.62rem;
+		margin-bottom: 1.62rem;
+		font-size: .81rem;
+		border-width: 1px;
+		border-style: solid;
+		border-top-width: .38rem;
+	}
+
+
+
+	.bbp-template-notice  {
+		@extend %bbp_notice;
+
+		&.info {}
+
+		&.important {}
+
+		&.error,
+		&.warning {}
+
+	}
+
+
+
+	.indicator-hint {
+		@extend %bbp_notice;
+	}
+
+
+
+// Alerts, popups
+// Such as the one shown when another moderator edits the topic.
+
+	.bbp-alert {
+
+		&-outer {
+			position: fixed;
+			#{$left}: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba( #000, .33 );
+			z-index: 99999;
+		}
+
+		&-inner {
+			position: fixed;
+			width: 40em;
+			#{$left}: 50%;
+			top: 50%;
+			padding: 1.62em;
+			margin-#{$left}: -20em;
+			margin-top: -5em;
+			text-align: center;
+			color: #222;
+			background: #fff;
+			border-radius: .38em;
+			box-shadow: 0 .38em 1.62em rgba( #000, .33 );
+
+			p {
+				margin-bottom: 1em;
+			}
+
+		}
+
+		&-actions {
+
+			a {
+				display: inline-block;
+				margin: 0 .62em;
+			}
+
+		}
+
+	}

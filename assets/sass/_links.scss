@@ -1,0 +1,42 @@
+/* FILE: _links.scss */
+
+//
+// Links styles
+//
+
+
+
+
+.bbp-admin-links {
+	float: $right;
+	opacity: .5;
+	transition: opacity .3s;
+
+	&:hover,
+	.bbp-forum-header:hover &,
+	.bbp-topic-header:hover &,
+	.bbp-reply-header:hover & {
+		opacity: 1;
+	}
+
+	fieldset & {
+		float: $left;
+	}
+
+	a {
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: .81rem;
+		font-weight: 400;
+	}
+
+}
+
+
+
+.bbp-forum-header .bbp-forum-permalink,
+.bbp-topic-header .bbp-topic-permalink,
+.bbp-reply-header .bbp-reply-permalink {
+	float: $right;
+	margin-#{$left}: 1em;
+}

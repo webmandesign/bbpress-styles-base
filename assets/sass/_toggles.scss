@@ -1,0 +1,21 @@
+/* FILE: _toggles.scss */
+
+//
+// Toggles styles
+//
+
+
+
+
+
+#subscription-toggle,
+#favorite-toggle {
+	float: $right;
+
+	a {
+		text-decoration: none;
+		font-size: .81em;
+		font-weight: 700;
+	}
+
+}

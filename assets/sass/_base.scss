@@ -1,0 +1,95 @@
+/* FILE: _base.scss */
+
+//
+// Basic bbPress styles
+//
+
+
+
+
+
+// Wrapper and basic elements
+
+	.bbpress-wrapper {
+		@extend %bbp_clearfix;
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+
+		li {
+			list-style: inherit;
+		}
+
+	}
+
+
+
+// Header, body and footer wrappers
+
+	.bbp-header,
+	.bbp-body,
+	.bbp-footer {
+		clear: both;
+	}
+
+	.bbp-header,
+	.bbp-footer {
+		padding: 1.62rem;
+		text-transform: uppercase;
+		font-size: .81em;
+		font-weight: 700;
+
+		.bbp-search,
+		.bbp-forum,
+		.bbp-topic,
+		.bbp-reply {
+
+			&-author {
+				float: $left;
+				padding: 0;
+				margin: 0;
+				width: 10rem;
+			}
+
+			&-content {
+				padding: 0;
+				margin-#{$left}: 12.62rem;
+				text-align: $left;
+			}
+
+		}
+
+	}
+
+	.bbp-header {
+		border-bottom-width: .19em;
+		border-bottom-style: solid;
+
+		ul {
+			@extend %bbp_clearfix;
+		}
+
+	}
+
+	.bbp-body {
+
+		.bbp-header,
+		.bbp-footer {
+			border-width: 0;
+		}
+
+	}
+
+	.bbp-footer {
+		border-top-width: .19em;
+		border-top-style: solid;
+
+		p {
+			margin: 0;
+			line-height: 1;
+		}
+
+	}

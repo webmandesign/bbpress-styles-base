@@ -1,0 +1,331 @@
+/* FILE: _forum-topic-reply.scss */
+
+//
+// Forums, Topics and Replies styles
+//
+
+
+
+
+
+// Generic
+
+	.bbp-lead-topic,
+	.bbp-topics,
+	.bbp-forums,
+	.bbp-replies,
+	.bbp-search-results {
+		@extend %bbp_clearfix;
+		clear: both;
+		margin-bottom: 1.62em;
+	}
+
+
+
+	// Forum + Topic + Reply
+
+		.bbp-body {
+
+			.forum,
+			.topic,
+			.reply,
+			.hentry {
+				@extend %bbp_clearfix;
+				padding: 2.62rem 1.62rem;
+				margin: 0;
+
+				&:not(:first-child) {
+					border-top-width: 1px;
+					border-top-style: solid;
+				}
+
+			}
+
+		}
+
+		.bbp-forum,
+		.bbp-topic,
+		.bbp-reply {
+
+			&-header {
+				@extend %bbp_clearfix;
+				clear: both;
+				padding: 1.62rem;
+				margin: 0;
+				font-size: .81em;
+				border-top-width: 1px;
+				border-top-style: solid;
+			}
+
+			&-content {
+				margin-#{$left}: 12.62rem;
+				text-align: $left;
+			}
+
+			&-title {
+				font-weight: 700;
+
+				h3 {
+					padding: 0;
+					text-transform: none;
+					background: none;
+					border-width: 0;
+				}
+
+			}
+
+			&-author {
+				float: $left;
+				width: 8rem;
+				text-align: center;
+
+				.bbp-header &,
+				.bbp-footer & {
+					text-align: inherit;
+				}
+
+				br {
+					display: none;
+				}
+
+				.avatar {
+					max-width: 5rem;
+					margin-bottom: .62em;
+				}
+
+				.bbp-author-name {
+					display: inline-block;
+					word-wrap: break-word;
+				}
+
+				.bbp-author-role {
+					font-size: .81em;
+					font-style: italic;
+				}
+
+			}
+
+		}
+
+
+
+	// Forum + Topic
+
+		.bbp-forum,
+		.bbp-topic {
+
+			&-freshness {
+				float: $left;
+				width: 16%;
+
+				.bbp-body & {
+					font-size: .81em;
+				}
+
+				&-author {
+					font-weight: 700;
+				}
+
+			}
+
+		}
+
+		.bbp-forum-info,
+		.bbp-topic-title {
+			float: $left;
+			text-align: $left;
+			width: 56%;
+			margin-#{$right}: 4%;
+		}
+
+		.bbp-forum-info .bbp-forum-content,
+		.bbp-topic-meta {
+			padding: 0;
+			margin: .38em 0 0;
+			word-wrap: break-word;
+		}
+
+		.bbp-forum-topic-count,
+		.bbp-forum-reply-count,
+		.bbp-topic-voice-count,
+		.bbp-topic-reply-count {
+			float: $left;
+			width: 8%;
+			margin-#{$right}: 4%;
+
+			.bbp-body & {
+				font-size: .81em;
+				font-weight: 700;
+			}
+
+		}
+
+
+
+	// Topic + Reply
+
+		.bbp-topic,
+		.bbp-reply {
+
+			&-title {
+
+				.bbp-search & {
+					margin-top: .62em;
+
+					h3 {
+						text-transform: uppercase;
+						margin: 0;
+						font-size: 1em;
+						font-weight: 400;
+					}
+
+					a {
+						text-transform: none;
+						font-weight: 700;
+					}
+
+				}
+
+			}
+
+			&-content {
+
+				ul,
+				ol {
+					padding: 0;
+					margin: 0 1em 1em;
+				}
+
+					ul {
+						list-style: disc;
+					}
+
+					ol {
+						list-style: decimal;
+
+						ol {
+							list-style: lower-alpha;
+
+							ol {
+								list-style: upper-roman;
+							}
+
+						}
+
+					}
+
+				.bbp-user-mention {
+					display: inline;
+					padding: 0;
+					margin: 0;
+					font-weight: 600;
+				}
+
+			}
+
+			&-author {
+
+				.bbp-author-name {
+					clear: $left;
+					display: block;
+				}
+
+			}
+
+		}
+
+
+
+// Forums
+
+	.bbp-forums-list {
+		margin: 0;
+		margin-#{$right}: .62rem;
+		padding-#{$left}: 1rem;
+		border-#{$left}-width: 1px;
+		border-#{$left}-style: solid;
+
+		li {
+			display: inline;
+			font-size: .81em;
+		}
+
+	}
+
+
+
+// Topics
+
+	.bbp-topic {
+
+		&-meta {
+
+			span {
+				white-space: nowrap;
+			}
+
+			.bbp-topic-title & {
+				font-size: .81rem;
+				font-weight: 400;
+			}
+
+		}
+
+		&-title {
+
+			.bbp-search & {
+				float: none;
+				width: 100%;
+				overflow: hidden;
+
+				h3 {
+					display: inline-block;
+				}
+
+			}
+
+			&-meta {
+				// This is only for "in forum XYZ";
+				display: inline-block;
+				margin-#{$left}: .62em;
+				text-transform: uppercase;
+				font-weight: 400;
+
+				&::before {
+					content: '\2026'; // … or &hellip;
+				}
+
+				a {
+					text-transform: none;
+					font-weight: 700;
+				}
+
+			}
+
+		}
+
+		&-admin-links,
+		&-counts {
+			width: 50%;
+		}
+
+	}
+
+
+
+// Replies
+
+	.bbp-threaded-replies {
+		margin-#{$left}: 3.125rem;
+	}
+
+	.bbp-reply-to {
+		padding: 1em;
+		padding-#{$right}: 0;
+		margin-#{$left}: 8.125em;
+		text-align: $right;
+	}
+
+	#bbp-cancel-reply-to {
+		text-align: $right;
+	}

@@ -1,0 +1,37 @@
+/* FILE: _badges.scss */
+
+//
+// Badges and stickers
+//
+
+
+
+
+
+// Stickers
+
+	.bbpress-wrapper {
+
+		.sticky,
+		.super-sticky {
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 0;
+				#{$right}: 0;
+				top: 0;
+				border-style: solid;
+				border-width: 0 2.62em 2.62em 0;
+				border-color: transparent currentColor transparent transparent;
+			}
+
+		}
+
+		.sticky::before {
+			opacity: .33;
+		}
+
+	}

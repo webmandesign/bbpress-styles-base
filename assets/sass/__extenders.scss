@@ -1,0 +1,22 @@
+/* FILE: __extender.scss */
+
+//
+// Helper extenders
+//
+
+
+
+
+
+// Clearfix
+
+	%bbp_clearfix {
+
+		&::after {
+			content: '';
+			clear: both;
+			display: table;
+			table-layout: fixed;
+		}
+
+	}
