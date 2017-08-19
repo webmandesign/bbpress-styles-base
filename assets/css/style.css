@@ -49,6 +49,8 @@
 
 .bbp-search-form [type="text"], .bbp-search-form [type="search"], #bbp-search-form [type="text"], #bbp-search-form [type="search"] { width: 100%; max-width: 100%; }
 
+.bbp-topic-form, .bbp-reply-form { clear: both; }
+
 /* FILE: _links.scss */
 .bbp-admin-links { float: right; opacity: .5; transition: opacity .3s; }
 
@@ -161,7 +163,7 @@ body .bbp-the-content-wrapper .quicktags-toolbar input.button.button-small { hei
 
 .bbp-forum-header, .bbp-topic-header, .bbp-reply-header { clear: both; padding: 1.62rem; margin: 0; font-size: .81em; border-top-width: 1px; border-top-style: solid; }
 
-.bbp-forum-content, .bbp-topic-content, .bbp-reply-content { margin-left: 12.62rem; text-align: left; }
+.bbp-forum-content, .bbp-topic-content, .bbp-reply-content { text-align: left; }
 
 .bbp-forum-title, .bbp-topic-title, .bbp-reply-title { font-weight: 700; }
 
@@ -198,6 +200,8 @@ body .bbp-the-content-wrapper .quicktags-toolbar input.button.button-small { hei
 .bbp-search .bbp-topic-title h3, .bbp-search .bbp-reply-title h3 { text-transform: uppercase; margin: 0; font-size: 1em; font-weight: 400; }
 
 .bbp-search .bbp-topic-title a, .bbp-search .bbp-reply-title a { text-transform: none; font-weight: 700; }
+
+.bbp-topic-content, .bbp-reply-content { margin-left: 12.62rem; }
 
 .bbp-topic-content ul, .bbp-topic-content ol, .bbp-reply-content ul, .bbp-reply-content ol { padding: 0; margin: 0 1em 1em; }
 

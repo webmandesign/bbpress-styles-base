@@ -58,7 +58,6 @@
 			}
 
 			&-content {
-				margin-#{$left}: 12.62rem;
 				text-align: $left;
 			}
 
@@ -189,6 +188,7 @@
 			}
 
 			&-content {
+				margin-#{$left}: 12.62rem;
 
 				ul,
 				ol {
