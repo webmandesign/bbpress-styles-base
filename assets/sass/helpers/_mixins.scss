@@ -1,0 +1,59 @@
+/////////////////////
+//
+// Mixins
+//
+/////////////////////
+
+	//
+	// Responsive media query
+	//
+	// Avoid using rem unit in media queries as WebKit seems to ignore them or behave
+	// strangely (uses 16px base font size no matter what font-size is set up on html).
+	// @link  http://stackoverflow.com/questions/12201003/media-queries-with-rem-units-in-chrome
+	//
+	// @link  https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+	//
+	// @param  string $width     Breakpoint width in px
+	// @param  string $property  What CSS property to use (if you set `max-$` the $width will be lowered by 1px)
+	// @param  string $unit      Unit to use with the query (em by default, px breakpoint value will be converted)
+	//
+	@mixin responsive( $width: map_get( $breakpoint, 's' ), $property: 'min-width', $unit: 'em' ) {
+
+		@if 'max' == str-slice( $property, 1, 3 ) {
+			$width: $width - 1;
+		}
+
+		@if 'px' == $unit {
+			$width: $width * 1px;
+		} @else {
+			$width: $width / 16 +em;
+		}
+
+		@media only screen and ( #{$property}: #{$width} ) {
+			@content
+		}
+
+	} // /responsive
+
+
+
+	//
+	// LTR/RTL property value
+	//
+	// @param  string $property
+	// @param  string $value_ltr
+	// @param  string $value_rtl
+	//
+	@mixin rtl_property( $property, $value_ltr, $value_rtl ) { // {{RTL}}
+
+		@if rtl == $language_direction {
+
+			#{ $property }: $value_rtl;
+
+		} @else {
+
+			#{ $property }: $value_ltr;
+
+		}
+
+	} // /rtl_property

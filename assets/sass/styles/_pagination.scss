@@ -14,12 +14,23 @@
 	margin: 2.62em 0;
 
 	&-count {
-		float: $left;
 		font-size: .81em;
+
+		@include responsive( map_get( $breakpoint, 'm' ) ) {
+			float: $left;
+		}
+
 	}
 
 	&-links {
-		float: $right;
+		overflow: hidden;
+		margin-top: 1.62em;
+
+		@include responsive( map_get( $breakpoint, 'm' ) ) {
+			float: $right;
+			margin-top: 0;
+			margin-#{$left}: 1em;
+		}
 
 		a,
 		.current {
@@ -30,6 +41,11 @@
 			text-decoration: none;
 			border-width: 1px;
 			border-style: solid;
+
+			&:first-child {
+				margin-#{$left}: 0;
+			}
+
 		}
 
 		a:hover,
@@ -55,7 +71,6 @@
 .bbp-topic-pagination {
 	display: inline-block;
 	margin-#{$left}: .38em;
-	margin-bottom: .38em;
 
 	a {
 		padding: 0 .38em;

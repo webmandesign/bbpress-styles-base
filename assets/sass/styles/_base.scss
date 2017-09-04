@@ -37,35 +37,20 @@
 
 	.bbp-header,
 	.bbp-footer {
-		padding: 1.62rem;
-		text-transform: uppercase;
-		font-size: .81em;
-		font-weight: 700;
+		display: none;
 
-		.bbp-search,
-		.bbp-forum,
-		.bbp-topic,
-		.bbp-reply {
-
-			&-author {
-				float: $left;
-				padding: 0;
-				margin: 0;
-				width: 10rem;
-			}
-
-			&-content {
-				padding: 0;
-				margin-#{$left}: 12.62rem;
-				text-align: $left;
-			}
-
+		@include responsive( map_get( $breakpoint, 'l' ) ) {
+			display: block;
+			padding: 1.62rem;
+			text-transform: uppercase;
+			font-size: .81em;
+			font-weight: 700;
 		}
 
 	}
 
 	.bbp-header {
-		border-bottom-width: .19em;
+		border-bottom-width: 0;
 		border-bottom-style: solid;
 
 		ul {
@@ -83,8 +68,33 @@
 
 	}
 
+	.bbp-body,
+	.bbpress-wrapper > {
+
+		.forum,
+		.topic,
+		.reply,
+		.hentry {
+			@extend %bbp_clearfix;
+			padding: 2.62rem 0;
+			margin: 0;
+
+			@include responsive( map_get( $breakpoint, 'l' ) ) {
+				padding-left: 1.62rem;
+				padding-right: 1.62rem;
+			}
+
+			&:not(:first-child) {
+				border-top-width: 1px;
+				border-top-style: solid;
+			}
+
+		}
+
+	}
+
 	.bbp-footer {
-		border-top-width: .19em;
+		border-top-width: .38em;
 		border-top-style: solid;
 
 		p {

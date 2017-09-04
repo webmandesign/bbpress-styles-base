@@ -1,0 +1,41 @@
+/* FILE: __styles.scss */
+
+//
+// Load the actual bbPress styles
+//
+
+
+
+
+
+// Imports
+
+	@import 'base';
+
+	@import 'breadcrumbs';
+
+	@import 'forms';
+
+	@import 'links';
+
+	@import 'notices';
+
+	@import 'badges';
+
+	@import 'pagination';
+
+	@import 'toggles';
+
+	@import 'tinymce';
+
+	@import 'user';
+
+	@import 'forum-topic-reply';
+
+	@import 'revisions';
+
+	@import 'others';
+
+	@import 'widgets';
+
+	@import 'buddypress';

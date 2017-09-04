@@ -1,0 +1,37 @@
+/* FILE: _breadcrumbs.scss */
+
+//
+// Breadcrumbs styles
+//
+
+
+
+
+
+.bbp-breadcrumb {
+	margin: 0 0 2.62em;
+	font-size: .81em;
+
+	@include responsive( map_get( $breakpoint, 'm' ) ) {
+		float: $left;
+	}
+
+	span,
+	a {
+		display: inline-block;
+		vertical-align: middle
+	}
+
+	&-home {
+		font-weight: 700;
+	}
+
+	&-current {
+		max-width: 16em;
+		white-space: nowrap;
+		font-style: italic;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+}

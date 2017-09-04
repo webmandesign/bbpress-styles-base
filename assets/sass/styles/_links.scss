@@ -8,9 +8,15 @@
 
 
 .bbp-admin-links {
-	float: $right;
+	display: block;
+	margin-top: 1em;
 	opacity: .5;
 	transition: opacity .3s;
+
+	@include responsive( map_get( $breakpoint, 'l' ) ) {
+		float: $right;
+		margin-top: 0;
+	}
 
 	&:hover,
 	.bbp-forum-header:hover &,
@@ -20,7 +26,11 @@
 	}
 
 	fieldset & {
-		float: $left;
+
+		@include responsive( map_get( $breakpoint, 'l' ) ) {
+			float: $left;
+		}
+
 	}
 
 	a {

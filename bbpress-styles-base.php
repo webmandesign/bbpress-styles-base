@@ -4,7 +4,7 @@
  * Plugin Name:        bbPress Styles Base
  * Plugin URI:         https://github.com/webmandesign/bbpress-styles-base
  * Description:        Reseting the bbPress forum plugin default styles to bare minimum, allowing inheritance of styles from the theme.
- * Version:            0.9.1
+ * Version:            0.9.2
  * Author:             WebMan Design - Oliver Juhas
  * Author URI:         https://www.webmandesign.eu
  * License:            GNU General Public License v3
@@ -50,6 +50,10 @@
 					'bbp-default-base',
 					trailingslashit( plugin_dir_url( __FILE__ ) ) . 'assets/css/style.css'
 				);
+
+			// RTL setup
+
+				wp_style_add_data( 'bbp-default-base', 'rtl', 'replace' );
 
 	} // /bbpress_styles_base
 

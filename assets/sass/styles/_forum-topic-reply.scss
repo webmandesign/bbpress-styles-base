@@ -20,28 +20,38 @@
 		margin-bottom: 1.62em;
 	}
 
+	.bbp-search,
+	.bbp-forum,
+	.bbp-topic,
+	.bbp-reply {
 
+		&-author {
+			margin-bottom: 1.62rem;
+		}
 
-	// Forum + Topic + Reply
+		@include responsive( map_get( $breakpoint, 'l' ) ) {
 
-		.bbp-body {
-
-			.forum,
-			.topic,
-			.reply,
-			.hentry {
-				@extend %bbp_clearfix;
-				padding: 2.62rem 1.62rem;
+			&-author {
+				float: $left;
+				width: 8rem;
+				padding: 0;
 				margin: 0;
+				text-align: center;
+			}
 
-				&:not(:first-child) {
-					border-top-width: 1px;
-					border-top-style: solid;
-				}
-
+			&-content {
+				padding: 0;
+				margin-#{$left}: 11.62rem;
+				text-align: $left;
 			}
 
 		}
+
+	}
+
+
+
+	// Forum + Topic + Reply
 
 		.bbp-forum,
 		.bbp-topic,
@@ -50,15 +60,17 @@
 			&-header {
 				@extend %bbp_clearfix;
 				clear: both;
-				padding: 1.62rem;
+				padding: 1.62rem 0;
 				margin: 0;
 				font-size: .81em;
-				border-top-width: 1px;
+				border-top-width: .38em;
 				border-top-style: solid;
-			}
 
-			&-content {
-				text-align: $left;
+				@include responsive( map_get( $breakpoint, 'l' ) ) {
+					padding-left: 1.62rem;
+					padding-right: 1.62rem;
+				}
+
 			}
 
 			&-title {
@@ -74,9 +86,6 @@
 			}
 
 			&-author {
-				float: $left;
-				width: 8rem;
-				text-align: center;
 
 				.bbp-header &,
 				.bbp-footer & {
@@ -88,8 +97,15 @@
 				}
 
 				.avatar {
-					max-width: 5rem;
-					margin-bottom: .62em;
+					max-width: 1.62rem;
+
+					@include responsive( map_get( $breakpoint, 'l' ) ) {
+						max-width: 5rem;
+						margin-bottom: .62em;
+						margin-left: auto;
+						margin-right: auto;
+					}
+
 				}
 
 				.bbp-author-name {
@@ -100,6 +116,16 @@
 				.bbp-author-role {
 					font-size: .81em;
 					font-style: italic;
+				}
+
+				@include responsive( map_get( $breakpoint, 'l' ), 'max-width' ) {
+
+					> * {
+						display: inline-block;
+						margin-#{$right}: .38rem;
+						vertical-align: middle;
+					}
+
 				}
 
 			}
@@ -114,8 +140,11 @@
 		.bbp-topic {
 
 			&-freshness {
-				float: $left;
-				width: 16%;
+
+				@include responsive( map_get( $breakpoint, 'l' ) ) {
+					float: $left;
+					width: 20%;
+				}
 
 				.bbp-body & {
 					font-size: .81em;
@@ -131,10 +160,14 @@
 
 		.bbp-forum-info,
 		.bbp-topic-title {
-			float: $left;
-			text-align: $left;
-			width: 56%;
-			margin-#{$right}: 4%;
+
+			@include responsive( map_get( $breakpoint, 'l' ) ) {
+				float: $left;
+				text-align: $left;
+				width: 56%;
+				margin-#{$right}: 2%;
+			}
+
 		}
 
 		.bbp-forum-info .bbp-forum-content,
@@ -148,9 +181,14 @@
 		.bbp-forum-reply-count,
 		.bbp-topic-voice-count,
 		.bbp-topic-reply-count {
-			float: $left;
-			width: 8%;
-			margin-#{$right}: 4%;
+			display: none;
+
+			@include responsive( map_get( $breakpoint, 'l' ) ) {
+				display: block;
+				float: $left;
+				width: 9%;
+				margin-#{$right}: 2%;
+			}
 
 			.bbp-body & {
 				font-size: .81em;
@@ -188,7 +226,6 @@
 			}
 
 			&-content {
-				margin-#{$left}: 12.62rem;
 
 				ul,
 				ol {
@@ -226,8 +263,12 @@
 			&-author {
 
 				.bbp-author-name {
-					clear: $left;
-					display: block;
+
+					@include responsive( map_get( $breakpoint, 'l' ) ) {
+						clear: $left;
+						display: block;
+					}
+
 				}
 
 			}
@@ -306,7 +347,11 @@
 
 		&-admin-links,
 		&-counts {
-			width: 50%;
+
+			@include responsive( map_get( $breakpoint, 'l' ) ) {
+				width: 50%;
+			}
+
 		}
 
 	}
@@ -316,14 +361,12 @@
 // Replies
 
 	.bbp-threaded-replies {
-		margin-#{$left}: 3.125rem;
-	}
+		margin-#{$left}: 1rem;
 
-	.bbp-reply-to {
-		padding: 1em;
-		padding-#{$right}: 0;
-		margin-#{$left}: 8.125em;
-		text-align: $right;
+		@include responsive( map_get( $breakpoint, 'l' ) ) {
+			margin-#{$left}: 3.125rem;
+		}
+
 	}
 
 	#bbp-cancel-reply-to {

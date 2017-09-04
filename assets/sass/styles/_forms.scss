@@ -12,10 +12,14 @@
 
 	.bbp-form {
 		clear: both;
-		padding: 2rem;
+		padding: 1rem;
 		margin: 2.62rem 0;
 		border-width: 1px;
 		border-style: solid;
+
+		@include responsive( map_get( $breakpoint, 'm' ) ) {
+			padding: 2rem;
+		}
 
 		legend {
 			padding: .62em;
@@ -50,11 +54,25 @@
 			font-style: italic;
 		}
 
+		label .description {
+			margin-bottom: 0;
+		}
+
 	}
 
 	.submit {
-		// Styles for `fieldset.submit`, such as on user profile edit page.
 
+		// Submit button styles
+		&.button {
+			width: 100%;
+
+			@include responsive( map_get( $breakpoint, 'm' ) ) {
+				width: auto;
+			}
+
+		}
+
+		// Styles for `fieldset.submit`, such as on user profile edit page.
 		legend {
 			clip: rect( 1px, 1px, 1px, 1px );
 			position: absolute !important;
@@ -72,6 +90,10 @@
 
 	.bbp-search-form {
 		margin-bottom: 2.62rem;
+
+		form > div {
+			display: flex;
+		}
 
 		.hidden {
 			position: absolute;

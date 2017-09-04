@@ -1,7 +1,7 @@
-/* FILE: style.scss */
+/* FILE: style-rtl.scss */
 
 //
-// bbPress Styles Base
+// bbPress Styles Base (RTL)
 //
 // @package    bbPress Styles Base
 // @copyright  WebMan Design, Oliver Juhas
@@ -11,6 +11,12 @@
 //
 
 
+
+
+
+// Setup language direction
+
+	$language_direction: rtl;
 
 
 

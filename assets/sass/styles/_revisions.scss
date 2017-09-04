@@ -1,0 +1,30 @@
+/* FILE: _revisions.scss */
+
+//
+// Revisions log styles
+//
+
+
+
+
+
+.bbp-topic-content .bbp-topic-revision-log,
+.bbp-reply-content .bbp-topic-revision-log,
+.bbp-reply-content .bbp-reply-revision-log {
+	padding: 1em 0 0;
+	margin: 1rem 0 0;
+	list-style: none;
+	font-size: .81em;
+	border-top: 1px dashed;
+	opacity: .5;
+	transition: opacity .3s;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	.avatar {
+		display: none;
+	}
+
+}
