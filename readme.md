@@ -1,19 +1,21 @@
-# WebMan Templates
+# bbPress Styles Base
 
-Visit https://webmandesign.github.io/webman-templates.
+Visit https://webmandesign.github.io/bbpress-styles-base.
 
-A WordPress plugin that provides a collection of custom [**Beaver Builder** page builder](https://www.wpbeaverbuilder.com/) templates for WordPress themes by [WebMan Design](https://www.webmandesign.eu). Allows convenient and fast way of managing custom template updates without a need to update the compatible themes themselves. The plugin only serves additional custom templates to Beaver Builder page builder interface, thus it is not slowing down your website at all.
+Resets the bbPress forum plugin default styles to bare minimum, allowing styles to be inherited from the theme as much as possible.
 
-### List of style differences against the bbPress native stylesheet:
+**List of style differences against bbPress native stylesheet:**
 
-* @todo
+* Simplified bbPress styles significantly
+* Made bbPress styles more responsive
+* Removed all colors and font size setups
 
 
 ## Plugin installation
 
-Usually this plugin can be automatically installed after you activate a compatible WordPress theme (via [TGM Plugin Activation](http://tgmpluginactivation.com/) script). Alternatively, you can install the plugin manually:
+Install the plugin manually:
 
-1. Download the [latest plugin ZIP file](http://webmandesign.github.io/webman-templates/downloads/webman-templates.zip).
+1. Download the [latest plugin ZIP file](http://webmandesign.github.io/bbpress-styles-base/downloads/bbpress-styles-base.zip).
 2. In your WordPress dashboard navigate to the **Plugins &rarr; Add New** screen and click the **Upload** tab.
 3. Upload the ZIP file.
 4. Navigate to the **Plugins** screen and activate the WebMan Templates plugin.
@@ -21,23 +23,7 @@ Usually this plugin can be automatically installed after you activate a compatib
 
 ## Automatic plugin updates
 
-Once you install the plugin, it should receive updates automatically. You just **need to activate the plugin** to enable the automatic updates:
-
-* **Standard WordPress installation (single-site)**:
-  Just install and activate the plugin. You will receive a new plugin updates automatically.
-* **Multisite WordPress installation (network)**:
-  In this case you need to activate the plugin for the whole network of your WordPress sites. Otherwise the plugin automatic updates will not work. You will be notified about this if you accidentally activate the plugin for a single site in your network only. The plugin only works on sites that use a compatible themes.
-
-This plugin is also compatible with [**GitHub Updater** plugin](https://github.com/afragen/github-updater/wiki/Installation), so if you have GitHub Updater installed and active, the WebMan Templates plugin will be updated automatically as well. (This may be even better solution for WordPress multisite installations.)
-
-
-## WordPress theme integration
-
-This is information intended for a theme developers (currently for [WebMan Design themes](https://www.webmandesign.eu) only):
-
-* The theme **must** declare support for the plugin with a `add_theme_support( 'webman-templates' );` code.
-* The theme **can** declare support for global templates provided with the plugin (with a `add_theme_support( 'webman-templates-global' );` code). Otherwise only the theme specific templates are served.
-* Template thumbnails (featured images) can be served locally from the plugin once you upload them to the `templates/THEME_SLUG/thumbs` directory. In that case the exported template files (the Beaver Builder `.dat` files) must not contain the full URL to the image, only the image file name (with possible relative folder path to the image). The best size for template thumbnails is **256px wide** (the height of the image is up to you).
+This plugin is compatible with [**GitHub Updater** plugin](https://github.com/afragen/github-updater/wiki/Installation). Use Github Updater plugin to provide bbPress Styles Base plugin automatic updates.
 
 
 ## Versioning info
@@ -50,4 +36,4 @@ Plugin version numbers consist of `MAJOR.MINOR.PATCH` numbers:
 
 ---
 
-&copy; **WebMan Templates** by [WebMan Design](https://www.webmandesign.eu) | Distributed under terms of [GPL-3.0 license](https://www.gnu.org/licenses/gpl-3.0.html)
+&copy; **bbPress Styles Base** by [WebMan Design](https://www.webmandesign.eu) | Distributed under terms of [GPL-3.0 license](https://www.gnu.org/licenses/gpl-3.0.html)

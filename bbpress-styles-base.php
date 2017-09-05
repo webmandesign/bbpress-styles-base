@@ -3,8 +3,8 @@
 /**
  * Plugin Name:        bbPress Styles Base
  * Plugin URI:         https://github.com/webmandesign/bbpress-styles-base
- * Description:        Reseting the bbPress forum plugin default styles to bare minimum, allowing inheritance of styles from the theme.
- * Version:            0.9.2
+ * Description:        Resets the bbPress forum plugin default styles to bare minimum, allowing styles to be inherited from the theme as much as possible.
+ * Version:            1.0.0
  * Author:             WebMan Design - Oliver Juhas
  * Author URI:         https://www.webmandesign.eu
  * License:            GNU General Public License v3
@@ -30,6 +30,12 @@
  * Functionality
  */
 
+	/**
+	 * Load custom bbPress styles
+	 *
+	 * @since    1.0.0
+	 * @version  1.0.0
+	 */
 	function bbpress_styles_base() {
 
 		// Requirements check
@@ -44,14 +50,14 @@
 
 				wp_dequeue_style( 'bbp-default' );
 
-			// Enqueue base stylesheet
+			// Enqueue custom bbPress base stylesheet
 
 				wp_enqueue_style(
 					'bbp-default-base',
 					trailingslashit( plugin_dir_url( __FILE__ ) ) . 'assets/css/style.css'
 				);
 
-			// RTL setup
+			// RTL setup for custom bbPress base stylesheet
 
 				wp_style_add_data( 'bbp-default-base', 'rtl', 'replace' );
 
